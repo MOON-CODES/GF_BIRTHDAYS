@@ -1,105 +1,55 @@
+/* Set the default body margins and padding to 0 and set the background color to a light gray */
 body {
   margin: 0;
   padding: 0;
   background: #f2f2f2;
-  font-family: "Acme";
-  background: #000;
+  font-family: "Acme", sans-serif; /* Set the font family to Acme or a default sans-serif font */
+  background: #000; /* Override the background color to black */
 }
 
+/* Style the container that holds the elements */
 .container {
-  max-width: 1000px;
-  margin: 100px auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  max-width: 1000px; /* Set the maximum width of the container to 1000px */
+  margin: 100px auto; /* Set the top and bottom margins to 100px and the left and right margins to auto to center the container */
+  display: flex; /* Use flexbox to layout the child elements */
+  flex-wrap: wrap; /* Allow the child elements to wrap to the next line if there isn't enough space on the current line */
+  justify-content: space-around; /* Distribute the child elements evenly along the horizontal axis with some space between them */
 }
 
+/* Style the untoldcoding element */
 .untoldcoding {
-  position: relative;
-  margin: 20px 0;
-  width: 300px;
-  height: 400px;
-  background: linear-gradient(#fef7f7, #9198e5);
-  transform-style: preserve-3d;
-  transform: perspective(2000px);
-  transition: 1s;
+  position: relative; /* Position the element relative to its normal position */
+  margin: 20px 0; /* Set the top and bottom margins to 20px and the left and right margins to 0 */
+  width: 300px; /* Set the width of the element to 300px */
+  height: 400px; /* Set the height of the element to 400px */
+  background: linear-gradient(#fef7f7, #9198e5); /* Set the background color to a linear gradient from light gray to light blue */
+  transform-style: preserve-3d; /* Preserve the 3D transformations of the element */
+  transform: perspective(2000px); /* Set the perspective of the element to 2000px */
+  transition: 1s; /* Add a transition effect to the element that lasts for 1 second */
 }
 
+/* Style the untoldcoding element when it is being hovered over */
 .untoldcoding:hover {
-  z-index: 1111;
-  transform: perspective(2000px) rotate(-10deg);
-
-  box-shadow: 5px 5px 20px rgb(235, 151, 128);
+  z-index: 1111; /* Set the z-index of the element to a high value to bring it to the front */
+  transform: perspective(2000px) rotate(-10deg); /* Rotate the element along the x-axis by -10 degrees */
+  box-shadow: 5px 5px 20px rgb(235, 151, 128); /* Add a box shadow to the element */
 }
 
+/* Style the img-container element */
 .untoldcoding .img-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  border: 1px solid #000;
-  box-sizing: border-box;
-  transform-origin: left;
-  z-index: 1;
-  transition: 1s;
+  position: relative; /* Position the element relative to its normal position */
+  width: 100%; /* Set the width of the element to 100% of its parent container */
+  height: 100%; /* Set the height of the element to 100% of its parent container */
+  border: 1px solid #000; /* Add a black border to the element */
+  box-sizing: border-box; /* Include the border width in the total width and height of the element */
+  transform-origin: left; /* Set the origin of the transformations to the left side of the element */
+  z-index: 1; /* Set the z-index of the element to a low value to keep it behind other elements */
+  transition: 1s; /* Add a transition effect to the element that lasts for 1 second */
 }
 
+/* Style the img element inside the img-container element */
 .untoldcoding .img-container img {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
+  position: absolute; /* Position the element absolutely */
+  left: 0; /* Set the left position of the element to 0 */
+  top: 0; /* Set the top position of the element to 0 */
 
-.untoldcoding:hover .img-container {
-  transform: rotateY(-135deg);
-}
-
-.untoldcoding .untoldcoding-details {
-  position: absolute;
-  left: 0;
-  top: 0;
-  box-sizing: border-box;
-  padding: 20px;
-  color: #000;
-}
-
-.untoldcoding .untoldcoding-details h2 {
-  margin: 0;
-  padding: 0.5em 0;
-  text-transform: uppercase;
-  font-size: 2em;
-  background: linear-gradient(to right, #f32170, #ff0c08, #710071, #eedd44);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  animation: untold 3s infinite ease-in-out;
-}
-
-@keyframes untold {
-  0% {
-    background: linear-gradient(to right, #f32170, #ff0c08, #710071, #eedd44);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    animation: untold 0.1s infinite ease-in-out;
-  }
-  50% {
-    background: linear-gradient(to right, #2fff00, #1008ff, #ec4705, #a744ee);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    animation: untold 3s infinite ease-in-out;
-  }
-  100% {
-    background: linear-gradient(to right, #f32121, #ff0890, #cdb903, #d122f8);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    animation: untold 1s infinite ease-in-out;
-  }
-}
-.untoldcoding .untoldcoding-details p {
-  margin: 0;
-  padding: 0;
-  line-height: 25px;
-  font-size: 1.3em;
-  font-weight: 900;
-}
